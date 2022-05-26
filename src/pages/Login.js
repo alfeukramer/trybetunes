@@ -29,7 +29,7 @@ class Login extends React.Component {
     const { name, hasLength, loading } = this.state;
 
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login" className="login-page">
         { loading ? <Loading /> : (
           <form>
             <label htmlFor="input-name-login">
@@ -39,19 +39,19 @@ class Login extends React.Component {
                 placeholder="Insira seu nome"
                 onChange={ this.onChangeFunction }
                 value={ name }
-
               />
             </label>
             <br />
-            <button
-              type="button"
-              data-testid="login-submit-button"
-              disabled={ hasLength }
-              onClick={ this.handleClick }
-            >
-              Entrar
-            </button>
-
+            <div className="btn-login">
+              <button
+                type="button"
+                data-testid="login-submit-button"
+                disabled={ hasLength }
+                onClick={ this.handleClick }
+              >
+                Entrar
+              </button>
+            </div>
           </form>
         )}
       </div>

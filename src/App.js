@@ -12,7 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <p>TrybeTunes</p>
+        <p className="initial-page">TrybeTunes </p>
         <Switch>
           <Route exact path="/" component={ Login } />
           <Route path="/search" component={ Search } />

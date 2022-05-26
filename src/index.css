@@ -17,3 +17,53 @@ code {
   display: flex;
   justify-content: center;
 }
+
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px dotted black;
+  margin: 0;
+}
+
+.header-page{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px dotted black;
+  margin-top: 0;
+  background-color: white;
+}
+
+.initial-page{
+  border: 2px dotted black;
+  padding: 15px;
+  margin: 0;
+  background-color: white;
+}
+
+.user-name{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: blue;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.page-search, .search-title, .btn-login {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.span-image, .span-artist, .span-album{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.imageAlbum{
+  border-radius: 50%;
+}

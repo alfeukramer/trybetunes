@@ -23,18 +23,19 @@ nameUser = async () => {
 render() {
   const { name, loading } = this.state;
   return (
-    <header data-testid="header-component">
-      <h2> Header </h2>
+    <header data-testid="header-component" className="header-page">
       { loading ? <Loading /> : (
         <>
-          <h3 data-testid="header-user-name">
-            { name }
-          </h3>
           <Link data-testid="link-to-search" to="/search">Pesquisa</Link>
           <p />
           <Link data-testid="link-to-favorites" to="/favorites">Favoritos</Link>
           <p />
           <Link data-testid="link-to-profile" to="/profile">Perfil</Link>
+          <h3 data-testid="header-user-name" className="user-name">
+            Usuário:
+            <br />
+            { name }
+          </h3>
         </>
       )}
     </header>
