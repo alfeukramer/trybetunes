@@ -8,7 +8,7 @@ class Search extends React.Component {
   constructor() {
     super();
     this.onChangeFunction = this.onChangeFunction.bind(this);
-    this.searchAlbums = this.searchAlbums.bind(this);
+    this.searchArtists = this.searchArtists.bind(this);
     this.state = {
       hasLength: true,
       nameArtist: '',
@@ -23,7 +23,7 @@ class Search extends React.Component {
     this.setState({ nameArtist: value, hasLength: value.length < LENGTH_NUMBER });
   }
 
-  searchAlbums() {
+  searchArtists() {
     const { nameArtist } = this.state;
     this.setState({ loading: true }, async () => {
       const result = await searchAlbumsAPI(nameArtist);
@@ -45,7 +45,7 @@ class Search extends React.Component {
         <div className="page-search">
           <input
             data-testid="search-artist-input"
-            placeholder="Digite a banda ou artista a ser pesquisada..."
+            placeholder="Digite aqui o artista..."
             value={ nameArtist }
             onChange={ this.onChangeFunction }
           />
@@ -53,7 +53,7 @@ class Search extends React.Component {
             type="button"
             data-testid="search-artist-button"
             disabled={ hasLength }
-            onClick={ this.searchAlbums }
+            onClick={ this.searchArtists }
           >
             Pesquisar
           </button>
