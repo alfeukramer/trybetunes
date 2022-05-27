@@ -74,3 +74,8 @@ code {
   justify-content: space-evenly;
   padding: 20px;
 }
+
+.album-name{
+  display: flex;
+justify-content: center;
+}

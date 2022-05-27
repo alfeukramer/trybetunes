@@ -47,16 +47,16 @@ class Album extends React.Component {
     return (
       <div data-testid="page-album">
         <Header />
-        <span data-testid="album-name">
+        <span data-testid="album-name" className="album-name">
           <h4>
             Músicas do album:
             <br />
           </h4>
-          <h3>
+          <h3 className="album-name">
             { collectionName }
           </h3>
         </span>
-        <h3 data-testid="artist-name">{ artistName }</h3>
+        <h3 data-testid="artist-name" className="album-name">{ artistName }</h3>
         <br />
         <br />
         { musicValidation
