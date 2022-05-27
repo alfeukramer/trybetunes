@@ -61,9 +61,11 @@ class Album extends React.Component {
         <br />
         { musicValidation
           ? (musicArrayFinal.map((musicas) => (
-            <div key={ musicas.trackId }>
-              <MusicCard musicas={ musicas } />
-            </div>
+            <MusicCard
+              key={ musicas.trackId }
+              musicas={ musicas }
+              trackId={ musicas.trackId }
+            />
           ))) : ('Nenhuma música encontrada!') }
       </div>
     );
